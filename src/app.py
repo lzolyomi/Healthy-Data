@@ -7,7 +7,8 @@ from os import listdir
 import platform
 
 #--------------Import custom functions, objects
-from Data import Data 
+from Data import Dataset 
+from dashboard_utils import create_obj
 
 #-------------Preparations for dashboard initiation
 if platform.system() == 'Windows':  # checks for the system to get the paths right
@@ -15,24 +16,23 @@ if platform.system() == 'Windows':  # checks for the system to get the paths rig
 else:
     path = os.getcwd()+"/src/data"
 
-onlyfiles = [f for f in listdir(path) if f.split('.')[-1] == 'parquet'] #only include parquet files
+#data_objs = [f for f in listdir(path) if f.split('.')[-1] == 'parquet'] #only include parquet files
+inventory = pd.read_csv('src/data_inventory.csv')
+data_objs = [] #list of Dataset objects from the inventory
+for index, row in inventory.iterrows():
+    create_obj(row, data_objs)
 
 topics = ['Water', 'Health', 'Living environment']
-datasets = [i.split('.')[0] for i in onlyfiles]
 
 #---------------Start Dashboard
 st.set_page_config(layout="wide")
 
 #---------------Layout of the app
 ### Filtering
-tops = st.sidebar.selectbox("Select the topic you are interested in:", topics)
-data_display = st.sidebar.multiselect("Directly select one of the datasets to look at:", datasets)
+tops = st.sidebar.selectbox("Select challenge you are interested in:", topics)
+data_display = st.sidebar.multiselect("Directly select datasets to display:", data_objs)
 
-data_objs = [] #will store the data objects
-for dataset in data_display:
-    data_objs.append(Data(dataset, f'{dataset} this is name', 'This is the DESCRIPTION'))
-
-for obj in data_objs:
+for obj in data_display:
     obj.display() #call display method on each Data object created previously
 
 if len(data_objs) < 1:
