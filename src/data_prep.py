@@ -2,14 +2,13 @@ from typing import Dict
 import pandas as pd 
 import os
 
-
 def convert_parquet(filename):
     """
     The path to csv file is opened and converted to a .parquet file
     then saved to the exact same directory, also returns the opened dataframe"""
     df = pd.read_csv(os.getcwd() + '/src/data/' + filename)
     filename_wo_extension = filename.split('.')[0]
-    df.to_parquet(filename_wo_extension + '.parquet')
+    df.to_parquet('src/data/'+filename_wo_extension + '.parquet')
     return df
 
 def check_inv_file():
@@ -32,12 +31,13 @@ def assess_file(file, existing_files):
     data_inv is the opened csv file for inventory"""
     filename = file.split('.')[0] #stores filename without extension
     if file.split('.')[-1] == 'csv':
-        if filename not in existing_files:
+        if file not in existing_files:
             confirm = input(f'Dataset {filename} not in inventory, want to add? y/n ')
             if confirm == 'y':
                 df = convert_parquet(file) #### warning this can overwrite .parquet files in the directory
+                print(file)
                 details = {
-                    'file':file,
+                    'filename':filename,
                     'name':input('Name of dataset: '),
                     'description':input('Description of dataset '),
                     'health':input('Can it be used for health challenge? 1/0'),
@@ -54,14 +54,13 @@ def update_datainv(path):
     offers to update them, at the end it saves the updated inventory.csv file"""
     data_inv = check_inv_file()
     existing_filenames = list(data_inv['filename'].values) #filenames in inventory
+    print(existing_filenames)
     for file in os.listdir(os.getcwd() + path):
         abs_path = os.getcwd() + path + file
         if os.path.isfile(abs_path): #checks if its not a folder
             new_row = assess_file(file, existing_filenames)
-            print(new_row)
             if type(new_row) == dict: #check if we actually want to add
                 data_inv = data_inv.append(new_row, ignore_index=True)
-    print(data_inv.shape)
     data_inv.to_csv('src/data_inventory.csv')
                 
 
