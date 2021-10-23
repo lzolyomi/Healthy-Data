@@ -35,11 +35,12 @@ for dataset in data_display:
 for obj in data_objs:
     obj.display() #call display method on each Data object created previously
 
-if tops=='Water':
-    st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
+if len(data_objs) < 1:
+    if tops=='Water':
+        st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
 
-if tops=='Health':
-    st.markdown("This is the central page for the topic health. Blablablabla, update select menu to only show health datasets")
+    if tops=='Health':
+        st.markdown("This is the central page for the topic health. Blablablabla, update select menu to only show health datasets")
 
-if tops=='Living environment':
-    st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
+    if tops=='Living environment':
+        st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
