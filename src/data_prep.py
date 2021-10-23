@@ -40,9 +40,9 @@ def assess_file(file, existing_files):
                     'file':file,
                     'name':input('Name of dataset: '),
                     'description':input('Description of dataset '),
-                    'health':input('Can it be used for health challenge? '),
-                    'water':input('Can it be used for water challenge? '),
-                    'living':input('Can it be used for living environment? ')
+                    'health':input('Can it be used for health challenge? 1/0'),
+                    'water':input('Can it be used for water challenge? 1/0'),
+                    'living':input('Can it be used for living environment? 1/0')
                     }
                 return details
 
