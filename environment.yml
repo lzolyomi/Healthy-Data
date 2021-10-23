@@ -4,3 +4,6 @@ dependencies:
 - pyarrow
 - fastparquet
 - streamlit
+- numpy
+- os
+- platform
