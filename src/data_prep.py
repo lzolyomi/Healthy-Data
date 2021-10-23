@@ -27,4 +27,6 @@ def convert_all(path):
     
 
 if __name__ == '__main__':
-    convert_all('/src/data')
+    confirm = input('Do you want to convert all csv files in data folder? (y/n)')
+    if confirm.lower() == 'y':
+        convert_all('/src/data')
