@@ -23,3 +23,12 @@ st.set_page_config(layout="wide")
 #---------------Layout of the app
 tops = st.sidebar.selectbox("Select the topic you are interested in:", topics)
 datasets = st.sidebar.selectbox("Directly select one of the datasets to look at:", datasets)
+
+if tops=='Water':
+    st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
+
+if tops=='Health':
+    st.markdown("This is the central page for the topic health. Blablablabla, update select menu to only show health datasets")
+
+if tops=='Living environment':
+    st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
