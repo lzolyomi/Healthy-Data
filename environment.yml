@@ -5,5 +5,3 @@ dependencies:
 - fastparquet
 - streamlit
 - numpy
-- os
-- platform
