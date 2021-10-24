@@ -26,19 +26,43 @@ st.set_page_config(layout="wide")
 #---------------Layout of the app
 ### Filtering
 tops = st.sidebar.selectbox("Select challenge you are interested in:", topics)
-data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in data_objs])
 
-objs_display = return_objs(data_display, data_objs)
+water = []
+health = []
+living_env = []
+for d in data_objs:
+    if d.water==1:
+        water.append(d)
+    if d.health==1:
+        health.append(d)
+    if d.living==1:
+        living_env.append(d)
 
-for obj in objs_display:
-    obj.display() #call display method on each Data object created previously
+if tops=='Water':
+    st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
 
-if len(objs_display) < 1:
-    if tops=='Water':
-        st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
+    data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in water])
+    objs_display = return_objs(data_display, data_objs)
 
-    if tops=='Health':
-        st.markdown("This is the central page for the topic health. Blablablabla, update select menu to only show health datasets")
+    for obj in objs_display:
+        obj.display() 
 
-    if tops=='Living environment':
-        st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
+
+if tops=='Health':
+    st.markdown("This is the central page for the topic health. Blablablabla, update select menu to only show health datasets")
+
+    data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in health])
+    objs_display = return_objs(data_display, data_objs)
+
+    for obj in objs_display:
+        obj.display() 
+
+
+if tops=='Living environment':
+    st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
+
+    data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in living_env])
+    objs_display = return_objs(data_display, data_objs)
+
+    for obj in objs_display:
+        obj.display() 
