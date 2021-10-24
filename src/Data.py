@@ -16,7 +16,7 @@ class Dataset:
     def open_file(self):
         self.df = pd.read_parquet(f'src/data/{self.filename}.parquet')
 
-    def download(self): #returns a download button that contains the csv version of the dataframe
+    def download(self): 
         """
         Returns a streamlit download button with the csv file attached
         NOTE only run after open_file, otherwise the dataframe is not there"""
@@ -28,7 +28,10 @@ class Dataset:
             mime='text/csv'
         )
 
-    def display(self): #Displays the dataframe along with some description
+    def display(self):
+        """
+        Displays the name, description
+        the dataframe and a download button for csv"""
         ret_elements = []
         ret_elements.append(st.markdown(f'## {self.name} \n #### {self.descr}'))
         self.open_file() #opens file as dataframe

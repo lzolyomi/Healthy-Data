@@ -17,3 +17,17 @@ def create_obj(row, lst):
             bool(row['living']),
         )
     )
+
+def return_objs(lst, objs):
+    """
+    Given a list of attributes, the type of the attribute and 
+    another list with Dataset objects, it returns a list containing
+    all objects that has a matching attribute name with the first 
+    argument's list"""
+    found_objects = []
+    for elem in lst:
+        for obj in objs:
+            if elem == obj.name:
+                found_objects.append(obj)
+
+    return found_objects
