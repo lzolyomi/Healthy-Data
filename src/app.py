@@ -11,10 +11,6 @@ from Data import Dataset
 from dashboard_utils import create_obj, return_objs
 
 #-------------Preparations for dashboard initiation
-if platform.system() == 'Windows':  # checks for the system to get the paths right
-    path = os.getcwd()+"\src\data"
-else:
-    path = os.getcwd()+"/src/data"
 
 #data_objs = [f for f in listdir(path) if f.split('.')[-1] == 'parquet'] #only include parquet files
 inventory = pd.read_csv('src/data_inventory.csv')
@@ -37,7 +33,7 @@ objs_display = return_objs(data_display, data_objs)
 for obj in objs_display:
     obj.display() #call display method on each Data object created previously
 
-if len(data_objs) < 1:
+if len(objs_display) < 1:
     if tops=='Water':
         st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
 

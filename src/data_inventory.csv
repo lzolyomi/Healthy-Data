@@ -1,3 +1,4 @@
 ,filename,name,description,health,water,living
 0,water_usage,Water usage,Average water usage and cost,1,1,1
 1,jobs_Brabant,Brabant Jobs,Jobs in Brabant per municipality and sector for 2020,1,0,1
+2,COVID_metrics,COVID-19 statistics,COVID-19 statistics since February 2020,1,0,0
