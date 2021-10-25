@@ -29,9 +29,9 @@ def assess_file(file, existing_files):
     if not offers to add it
     file is filename
     data_inv is the opened csv file for inventory"""
-    filename = file.split('.')[0] #stores filename without extension
+    filename = file.split('.')[0] #stores file name without extension
     if file.split('.')[-1] == 'csv':
-        if file not in existing_files:
+        if filename not in existing_files:
             confirm = input(f'Dataset {filename} not in inventory, want to add? y/n ')
             if confirm == 'y':
                 df = convert_parquet(file) #### warning this can overwrite .parquet files in the directory
