@@ -34,9 +34,16 @@ for obj in objs_display:
     # Loop through each data object
     f = obj.filename
     obj.display()
-    obj.display_plots()
     col1, col2, col3 = st.columns(3)
+    ### here comes the plots for specific datasets
     if f == 'jobs_Brabant':
-        y = col1.selectbox('Choose the sector you want to plot', obj.filename.columns[2:])
+        y = col1.selectbox('Choose the sector you want to plot', obj.df.columns[2:])
         barfig = px.bar(obj.df, x='Municipality/Sector', y=y)
-        st.plotly_chart(barfig)
+        st.plotly_chart(barfig, use_container_width=True)
+
+    if f == 'youth_labour_participation':
+        value = col1.selectbox('Select which value you want to plot', obj.df.columns[5:])
+        period = col2.select_slider("Select the time you want to look at ", obj.df['Period'].unique())
+        st.markdown('The plot shows distribution of young workers distribution by age, according to the selected criteria')
+        piefig = px.pie(obj.df[obj.df['Period']==period], names='Age', values=value)
+        st.plotly_chart(piefig)

@@ -58,11 +58,6 @@ class Dataset:
             )
         return ret_elements
 
-    def display_plots(self):
-        plots = get_plots(self)
-        print(plots)
-        return plots
-
 
     def __str__(self):
         return self.name
