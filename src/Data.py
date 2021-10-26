@@ -1,7 +1,8 @@
-from typing import Tuple
 import pandas as pd
 import streamlit as st 
 
+####### Importing functions
+from plots import get_plots
 
 class Dataset:
     def __init__(self, filename, name, descr, health, water, living) -> None:
@@ -12,6 +13,7 @@ class Dataset:
         self.health = health
         self.water = water
         self.living = living
+        self.plotting = ['bar', 'scatter']
 
     def open_file(self):
         self.df = pd.read_parquet(f'src/data/{self.filename}.parquet')
@@ -45,6 +47,11 @@ class Dataset:
                 st.dataframe(self.df[:401])
             )
         return ret_elements
+
+    def display_plots(self):
+        plots = get_plots(self)
+        print(plots)
+        return plots
 
 
     def __str__(self):

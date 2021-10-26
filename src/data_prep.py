@@ -63,7 +63,5 @@ def update_datainv(path):
                 data_inv = data_inv.append(new_row, ignore_index=True)
     data_inv.to_csv('src/data_inventory.csv')
                 
-
-
 if __name__ == '__main__':
     update_datainv('/src/data/')

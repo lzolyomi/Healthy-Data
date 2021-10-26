@@ -5,3 +5,4 @@ dependencies:
 - fastparquet
 - streamlit
 - numpy
+- plotly

@@ -1,6 +1,6 @@
-,filename,name,description,health,water,living
-0,water_usage,Water usage,Average water usage and cost,1,1,1
-1,jobs_Brabant,Brabant Jobs,Jobs in Brabant per municipality and sector for 2020,1,0,1
-2,COVID_metrics,COVID-19 statistics,COVID-19 statistics since February 2020,1,0,0
-3,Brabant_health,Brabant health information,Brabant health information in percentages,1,0,0
-3,brabant_cities,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities. ,1,1,1
+,Unnamed: 0,filename,name,description,health,water,living
+0,0.0,water_usage,Water usage,Average water usage and cost,1,1,1
+1,1.0,jobs_Brabant,Brabant Jobs,Jobs in Brabant per municipality and sector for 2020,1,0,1
+2,2.0,COVID_metrics,COVID-19 statistics,COVID-19 statistics since February 2020,1,0,0
+3,3.0,Brabant_health,Brabant health information,Brabant health information in percentages,1,0,0
+4,,vacancies_brabant,Brabant vacancies,Contains job vanacies in brabant per sector and municipality,0,0,1

@@ -45,7 +45,8 @@ if tops=='Water':
     objs_display = return_objs(data_display, data_objs)
 
     for obj in objs_display:
-        obj.display() 
+        obj.display()
+        obj.display_plots()
 
 
 if tops=='Health':
@@ -58,6 +59,7 @@ if tops=='Health':
         obj.display() 
 
 
+
 if tops=='Living environment':
     st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
 
@@ -66,3 +68,4 @@ if tops=='Living environment':
 
     for obj in objs_display:
         obj.display() 
+        obj.display_plots()
