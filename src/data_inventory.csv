@@ -1,6 +1,16 @@
-,Unnamed: 0,filename,name,description,health,water,living
-0,0.0,water_usage,Water usage,Average water usage and cost,1,1,1
-1,1.0,jobs_Brabant,Brabant Jobs,Jobs in Brabant per municipality and sector for 2020,1,0,1
-2,2.0,COVID_metrics,COVID-19 statistics,COVID-19 statistics since February 2020,1,0,0
-3,3.0,Brabant_health,Brabant health information,Brabant health information in percentages,1,0,0
-4,,vacancies_brabant,Brabant vacancies,Contains job vanacies in brabant per sector and municipality,0,0,1
+,filename,name,description,health,water,living
+0,water_usage,Water usage,This dataset contains the average water usage and cost,1,1,1
+1,jobs_Brabant,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020,1,0,1
+2,COVID_metrics,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
+3,Brabant_health,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
+4,brabant_cities,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
+5,den_Bosch_area_distr,Seems rather empty cause it only has 2 rows,Unknown,0,0,0
+6,housing_stock,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
+7,kwb-2017,What is this exactly (kwb-2017),Unknown,0,0,0
+8,land_usage, Land usage Brabant, This dataset contains the land usage in municipalities across Brabant.,0,1,0
+9,lanscape_management,Landscape management data Brabant, This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
+10,student_debt,Student debt data,This dataset contains national figures about student debt.,0,0,1 
+11,tree_data,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
+12,vacancies_brabant,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant.,0,0,1
+13,weather_data,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
+14,youth_labour_participation,Youth labour participation,This dataset contains figures about youth labor participation in the Netherlands.,1,0,1 
