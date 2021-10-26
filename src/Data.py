@@ -13,10 +13,20 @@ class Dataset:
         self.health = health
         self.water = water
         self.living = living
-        self.plotting = ['bar', 'scatter']
-
+    
     def open_file(self):
         self.df = pd.read_parquet(f'src/data/{self.filename}.parquet')
+
+    def return_topics(self):
+        """Stores the topics present in a list"""
+        topics = []
+        if self.health:
+            topics.append('Health')
+        if self.water:
+            topics.append('Water')
+        if self.living:
+            topics.append('Living environment')
+        self.topics = topics
 
     def download(self): 
         """

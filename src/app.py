@@ -18,6 +18,8 @@ data_objs = []#list of Dataset objects from the inventory
 for index, row in inventory.iterrows():
     create_obj(row, data_objs)
 
+for d in data_objs:
+    d.return_topics()
 topics = ['Water', 'Health', 'Living environment']
 
 #---------------Start Dashboard
@@ -27,45 +29,10 @@ st.set_page_config(layout="wide")
 ### Filtering
 tops = st.sidebar.selectbox("Select challenge you are interested in:", topics)
 
-water = []
-health = []
-living_env = []
-for d in data_objs:
-    if d.water==1:
-        water.append(d)
-    if d.health==1:
-        health.append(d)
-    if d.living==1:
-        living_env.append(d)
+objs_filtered = [d for d in data_objs if tops in d.topics]
+data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in objs_filtered])
+objs_display = return_objs(data_display, objs_filtered)
 
-if tops=='Water':
-    st.markdown("This is the central page for the topic water. Blablablabla, update select menu to only show water datasets")
-
-    data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in water])
-    objs_display = return_objs(data_display, data_objs)
-
-    for obj in objs_display:
-        obj.display()
-        obj.display_plots()
-
-
-if tops=='Health':
-    st.markdown("This is the central page for the topic health. Blablablabla, update select menu to only show health datasets")
-
-    data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in health])
-    objs_display = return_objs(data_display, data_objs)
-
-    for obj in objs_display:
-        obj.display() 
-
-
-
-if tops=='Living environment':
-    st.markdown("This is the central page for the topic living environment. Blablablabla, update select menu to only show living environment datasets")
-
-    data_display = st.sidebar.multiselect("Directly select datasets to display:", [d.name for d in living_env])
-    objs_display = return_objs(data_display, data_objs)
-
-    for obj in objs_display:
-        obj.display() 
-        obj.display_plots()
+for obj in objs_display:
+    obj.display()
+    obj.display_plots()
