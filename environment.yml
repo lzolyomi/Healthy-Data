@@ -3,6 +3,5 @@ dependencies:
 - pandas
 - pyarrow
 - fastparquet
-- streamlit
 - numpy
 - plotly
