@@ -1,6 +1,4 @@
 name: dashboard
 dependencies:
 - pandas
-- pyarrow
-- fastparquet
 - plotly
