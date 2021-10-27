@@ -31,10 +31,12 @@ objs_display = return_objs(data_display, objs_filtered)
 
 ###------------ Displaying data
 for obj in objs_display:
+
     # Loop through each data object
     f = obj.filename
     obj.display()
     col1, col2, col3 = st.columns(3)
+
     ### here comes the plots for specific datasets
     if f == 'jobs_Brabant':
         y = col1.selectbox('Choose the sector you want to plot', obj.df.columns[2:])
@@ -68,3 +70,10 @@ for obj in objs_display:
         df_quarters = filter_quarters(df_filtered, 'Periods')
         barfig2 = px.bar(df_quarters, y='Change_baseline', x='Periods')
         st.plotly_chart(barfig2)
+
+    if f == 'municipality_data':
+        feature = col1.selectbox('Select a feature', obj.df.columns[3:])
+        municip = col2.multiselect('Select a municipality', obj.df['Name of municipality'].unique())
+        filtered = obj.df[obj.df['Name of municipality'].isin(municip)]
+        fig4 = px.bar(filtered, x='year', y=feature, color='Name of municipality')
+        st.plotly_chart(fig4)
