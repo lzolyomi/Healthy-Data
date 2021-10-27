@@ -61,7 +61,6 @@ def update_datainv(path):
     offers to update them, at the end it saves the updated inventory.csv file"""
     data_inv = check_inv_file()
     existing_filenames = list(data_inv['filename'].values) #filenames in inventory
-    print(existing_filenames)
     for file in os.listdir(os.getcwd() + path):
         abs_path = os.getcwd() + path + file
         if os.path.isfile(abs_path): #checks if its not a folder
