@@ -38,6 +38,7 @@ for obj in objs_display:
     ### here comes the plots for specific datasets
     if f == 'jobs_Brabant':
         y = col1.selectbox('Choose the sector you want to plot', obj.df.columns[2:])
+        st.markdown('The plot shows the amount of jobs in the chosen sector per municipality')
         barfig = px.bar(obj.df, x='Municipality/Sector', y=y)
         st.plotly_chart(barfig, use_container_width=True)
 
