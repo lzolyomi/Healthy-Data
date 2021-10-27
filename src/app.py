@@ -48,3 +48,9 @@ for obj in objs_display:
         st.markdown('The plot shows distribution of young workers distribution by age, according to the selected criteria')
         piefig = px.pie(obj.df[obj.df['Period']==period], names='Age', values=value)
         st.plotly_chart(piefig)
+
+    if f == 'Brabant_health':
+        y = col1.selectbox('Select which health characteristic you want to look at', obj.df.columns[1:])
+        st.markdown('The plot shows the percentage of people falling in the chosen characteristic per municipality')
+        barf = px.bar(obj.df, x='Municipalities (2021)', y=y)
+        st.plotly_chart(barf, use_container_width=True)
