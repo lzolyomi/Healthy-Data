@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st 
 
 ####### Importing functions
-from plots import get_plots
 
 class Dataset:
     def __init__(self, filename, name, descr, health, water, living) -> None:

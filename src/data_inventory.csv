@@ -1,16 +1,17 @@
-,filename,Unnamed: 0,Unnamed: 0.1,name,description,health,water,living
-0,water_usage,0.0,0.0,Water usage,This dataset contains the average water usage and cost,1,1,1
-1,jobs_Brabant,1.0,1.0,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020,1,0,1
-2,COVID_metrics,2.0,2.0,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
-3,Brabant_health,3.0,3.0,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
-4,brabant_cities,4.0,4.0,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
-5,housing_stock,5.0,6.0,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
-6,land_usage,6.0,8.0, Land usage Brabant, This dataset contains the land usage in municipalities across Brabant.,0,1,0
-7,landscape_management,7.0,9.0,Landscape management data Brabant, This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
-8,student_debt,8.0,10.0,Student debt data,This dataset contains national figures about student debt.,0,0,1
-9,tree_data,9.0,11.0,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
-10,vacancies_brabant,10.0,12.0,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant.,0,0,1
-11,weather_data,11.0,13.0,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
-12,youth_labour_participation,12.0,14.0,Youth labour participation,This dataset contains figures about youth labor participation in the Netherlands.,1,0,1
-13,renewable_electricity,14.0,,Renewable energy,This dataset shows the electricity produced with different renewable sources between 1990 and 2020. All values are in mln kWh if not stated otherwise. Installations is absolute number,1,1,1
-14,consumer_expenses,,,Consumer expenses,Contains information on consumer expenses between 2000 and 2020. Change in baseline is ratio compared to 2015 values. So 2015 is 100. Delta YoY is the change compared to last years same data,1,0,1
+,Unnamed: 0,filename,Unnamed: 0.1,Unnamed: 0.1.1,name,description,health,water,living
+0,0.0,water_usage,0.0,0.0,Water usage,This dataset contains the average water usage and cost,1,1,1
+1,1.0,jobs_Brabant,1.0,1.0,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020,1,0,1
+2,2.0,COVID_metrics,2.0,2.0,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
+3,3.0,Brabant_health,3.0,3.0,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
+4,4.0,brabant_cities,4.0,4.0,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
+5,5.0,housing_stock,5.0,6.0,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
+6,6.0,land_usage,6.0,8.0, Land usage Brabant, This dataset contains the land usage in municipalities across Brabant.,0,1,0
+7,7.0,landscape_management,7.0,9.0,Landscape management data Brabant, This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
+8,8.0,student_debt,8.0,10.0,Student debt data,This dataset contains national figures about student debt.,0,0,1
+9,9.0,tree_data,9.0,11.0,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
+10,10.0,vacancies_brabant,10.0,12.0,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant.,0,0,1
+11,11.0,weather_data,11.0,13.0,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
+12,12.0,youth_labour_participation,12.0,14.0,Youth labour participation,This dataset contains figures about youth labor participation in the Netherlands.,1,0,1
+13,13.0,renewable_electricity,14.0,,Renewable energy,This dataset shows the electricity produced with different renewable sources between 1990 and 2020. All values are in mln kWh if not stated otherwise. Installations is absolute number,1,1,1
+14,14.0,consumer_expenses,,,Consumer expenses,Contains information on consumer expenses between 2000 and 2020. Change in baseline is ratio compared to 2015 values. So 2015 is 100. Delta YoY is the change compared to last years same data,1,0,1
+15,,bankruptcy,,,Bankruptcies,This dataset contains the number of bankruptcies reported in separate regions of the Netherlands for 2009-2020. This could serve as an indication of financial situation.,1,0,1

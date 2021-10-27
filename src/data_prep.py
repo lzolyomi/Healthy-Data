@@ -32,17 +32,17 @@ def assess_file(file, existing_files):
     filename = file.split('.')[0] #stores file name without extension
     if file.split('.')[-1] == 'csv':
         if filename not in existing_files:
-            confirm = input(f'Dataset {filename} not in inventory, want to add? y/n ')
+            confirm = input(f'>> Dataset {filename} not in inventory, want to add? y/n ')
             if confirm == 'y':
                 df = convert_parquet(file) #### warning this can overwrite .parquet files in the directory
                 print(file)
                 details = {
                     'filename':filename,
-                    'name':input('Name of dataset: '),
-                    'description':input('Description of dataset '),
-                    'health':input('Can it be used for health challenge? 1/0'),
-                    'water':input('Can it be used for water challenge? 1/0'),
-                    'living':input('Can it be used for living environment? 1/0')
+                    'name':input('>>>> Name of dataset: '),
+                    'description':input('>>>> Description of dataset '),
+                    'health':input('>>>> Can it be used for health challenge? 1/0 '),
+                    'water':input('>>>> Can it be used for water challenge? 1/0 '),
+                    'living':input('>>>> Can it be used for living environment? 1/0 ')
                     }
                 return details
 
@@ -71,13 +71,13 @@ def update_datainv(path):
     data_inv.to_csv('src/data_inventory.csv')
                 
 if __name__ == '__main__':
-    function = input('You want to add data? (y/n)? ')
+    function = input('// You want to add data? (y/n)? ')
     if function == 'y':
         update_datainv('/src/data/')
     else:
         still_delete = True
         while still_delete:
-            ans = input('Give filename to delete from inventory, or n to exit> ')
+            ans = input('Give filename to delete from inventory, or n to exit>> ')
             if ans == 'n':
                 break
             else:
