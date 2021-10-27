@@ -46,6 +46,13 @@ def assess_file(file, existing_files):
                     }
                 return details
 
+def delete_datasets(filename):
+    """
+    Deletes inventory entry for a dataset with given filename"""
+    inv = pd.read_csv('src/data_inventory.csv')
+    inv.set_index('filename', inplace=True)
+    inv.drop(filename, inplace=True)
+    inv.to_csv('src/data_inventory.csv')
 
 
 def update_datainv(path):
@@ -64,4 +71,15 @@ def update_datainv(path):
     data_inv.to_csv('src/data_inventory.csv')
                 
 if __name__ == '__main__':
-    update_datainv('/src/data/')
+    function = input('You want to add data? (y/n)? ')
+    if function == 'y':
+        update_datainv('/src/data/')
+    else:
+        still_delete = True
+        while still_delete:
+            ans = input('Give filename to delete from inventory, or n to exit> ')
+            if ans == 'n':
+                break
+            else:
+                delete_datasets(ans)
+    

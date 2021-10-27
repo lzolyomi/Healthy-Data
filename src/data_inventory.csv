@@ -1,16 +1,14 @@
-,filename,name,description,health,water,living
-0,water_usage,Water usage,This dataset contains the average water usage and cost,1,1,1
-1,jobs_Brabant,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020,1,0,1
-2,COVID_metrics,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
-3,Brabant_health,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
-4,brabant_cities,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
-5,den_Bosch_area_distr,Seems rather empty cause it only has 2 rows,Unknown,0,0,0
-6,housing_stock,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
-7,kwb-2017,What is this exactly (kwb-2017),Unknown,0,0,0
-8,land_usage, Land usage Brabant, This dataset contains the land usage in municipalities across Brabant.,0,1,0
-9,landscape_management,Landscape management data Brabant, This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
-10,student_debt,Student debt data,This dataset contains national figures about student debt.,0,0,1 
-11,tree_data,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
-12,vacancies_brabant,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant.,0,0,1
-13,weather_data,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
-14,youth_labour_participation,Youth labour participation,This dataset contains figures about youth labor participation in the Netherlands.,1,0,1 
+filename,Unnamed: 0,name,description,health,water,living
+water_usage,0,Water usage,This dataset contains the average water usage and cost,1,1,1
+jobs_Brabant,1,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020,1,0,1
+COVID_metrics,2,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
+Brabant_health,3,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
+brabant_cities,4,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
+housing_stock,6,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
+land_usage,8, Land usage Brabant, This dataset contains the land usage in municipalities across Brabant.,0,1,0
+landscape_management,9,Landscape management data Brabant, This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
+student_debt,10,Student debt data,This dataset contains national figures about student debt.,0,0,1
+tree_data,11,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
+vacancies_brabant,12,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant.,0,0,1
+weather_data,13,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
+youth_labour_participation,14,Youth labour participation,This dataset contains figures about youth labor participation in the Netherlands.,1,0,1
