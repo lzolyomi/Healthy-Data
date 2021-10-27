@@ -5,7 +5,7 @@ import plotly.express as px
 
 #--------------Import custom functions, objects
 from Data import Dataset 
-from dashboard_utils import create_obj, return_objs
+from dashboard_utils import create_obj, filter_quarters, return_objs
 
 #-------------Preparations for dashboard initiation
 
@@ -61,3 +61,10 @@ for obj in objs_display:
         period2 = col2.select_slider('Select time period', obj.df['Periods'].unique())
         piefig2 = px.pie(wo_total[wo_total['Periods'] == period2], values=show_value, names='Source')
         st.plotly_chart(piefig2)
+    
+    if f == 'consumer_expenses':
+        category = col1.selectbox('Select a category', obj.df['Category'].unique())
+        df_filtered = obj.df[obj.df['Category'] == category]
+        df_quarters = filter_quarters(df_filtered, 'Periods')
+        barfig2 = px.bar(df_quarters, y='Change_baseline', x='Periods')
+        st.plotly_chart(barfig2)

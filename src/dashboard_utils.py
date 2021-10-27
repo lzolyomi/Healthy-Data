@@ -31,3 +31,9 @@ def return_objs(lst, objs):
                 found_objects.append(obj)
 
     return found_objects
+
+def filter_quarters(df, colname):
+    df['periodlength'] = df[colname].str.len()
+    ret_df = df[df['periodlength'] > 4]
+    ret_df.drop(columns=['periodlength'], inplace = True)
+    return ret_df
