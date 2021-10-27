@@ -20,7 +20,7 @@ for d in data_objs:
 topics = ['Water', 'Health', 'Living environment']
 
 #---------------Start Dashboard
-st.set_page_config(layout="wide", page_title='Healthy City')
+st.set_page_config(layout="wide", page_title='Healthy City',page_icon='src/logo.png')
 
 #---------------Layout of the app
 ### Filtering
@@ -50,7 +50,14 @@ for obj in objs_display:
         st.plotly_chart(piefig)
 
     if f == 'Brabant_health':
-        y = col1.selectbox('Select which health characteristic you want to look at', obj.df.columns[1:])
+        y2 = col1.selectbox('Select which health characteristic you want to look at', obj.df.columns[1:])
         st.markdown('The plot shows the percentage of people falling in the chosen characteristic per municipality')
-        barf = px.bar(obj.df, x='Municipalities (2021)', y=y)
+        barf = px.bar(obj.df, x='Municipalities (2021)', y=y2)
         st.plotly_chart(barf, use_container_width=True)
+    
+    if f == 'renewable_electricity':
+        wo_total = obj.df[obj.df['Source'] != 'Total']
+        show_value = col1.selectbox('Choose column to show', obj.df.columns[4:])
+        period2 = col2.select_slider('Select time period', obj.df['Periods'].unique())
+        piefig2 = px.pie(wo_total[wo_total['Periods'] == period2], values=show_value, names='Source')
+        st.plotly_chart(piefig2)

@@ -1,3 +1,4 @@
 # Healthy-Data
 
-This repo contains a dashboard used for the Healthy City Hackathons
+### Streamlit dashboard for easy access to datasets
+These datasets were preprocessed and curated to support data driven professional Hackathons. 
