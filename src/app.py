@@ -20,7 +20,7 @@ for d in data_objs:
 topics = ['Water', 'Health', 'Living environment']
 
 #---------------Start Dashboard
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title='Healthy City')
 
 #---------------Layout of the app
 ### Filtering
