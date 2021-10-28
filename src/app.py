@@ -69,7 +69,7 @@ for obj in objs_display:
         df_filtered = obj.df[obj.df['Category'] == category]
         df_quarters = filter_quarters(df_filtered, 'Periods')
         barfig2 = px.bar(df_quarters, y='Change_baseline', x='Periods')
-        st.plotly_chart(barfig2)
+        st.plotly_chart(barfig2, use_container_width=True)
 
     if f == 'municipality_data':
         feature = col1.selectbox('Select a feature', obj.df.columns[3:])
@@ -84,3 +84,34 @@ for obj in objs_display:
         filt = obj.df[(obj.df['Periods'] == year) & (obj.df['Regions'] != 'Nederland')] 
         barchart = px.bar(filt, y=feat, x='Regions')
         st.plotly_chart(barchart, use_container_width=True)
+
+    if f=='bankruptcy':
+        only_total = obj.df[obj.df['TypeOfBankruptcy'] == 'Total natural persons']
+        sel_region = col1.selectbox('Select region', only_total['Regions'].unique())
+        region_filter = only_total[only_total['Regions'] == sel_region]
+        quarterly = filter_quarters(region_filter, 'Periods')
+        fig5 = px.bar(quarterly, x='Periods', y='PronouncedBankrupcies_1')
+        st.plotly_chart(fig5, use_container_width=True)
+
+    if f=='student_debt':
+        char = col1.selectbox('Select a characteristic', obj.df['Characteristic'].unique())
+        feature2 = col2.selectbox('Select a feature', obj.df.columns[3:])
+        filtered2 = obj.df[obj.df['Characteristic'] == char]
+        fig6 = px.bar(filtered2, x='Period', y=feature2)
+        st.plotly_chart(fig6, use_container_width=True)
+
+    if f=='housing_stock':
+        #NEED FIX for piechart
+        feat2 = col1.selectbox('Choose a feature', obj.df.columns[3:])
+        pie3 = px.pie(obj.df, names=None, values=feat2)
+        st.plotly_chart(pie3)
+    if f=='land_usage':
+        municip = col1.selectbox('Choose municipality', obj.df['municipalities_Brabant'])
+        filt3 = obj.df[obj.df['municipalities_Brabant'] == municip]
+        vals = list(filt3.values[0])[1:]
+        cols = filt3.columns[1:]
+        newdf = pd.DataFrame({'Value':vals, 'feature':cols})
+        fig7 = px.pie(newdf, names='feature', values='Value')
+        st.plotly_chart(fig7)
+        
+    
