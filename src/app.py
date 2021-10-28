@@ -30,12 +30,19 @@ data_display = st.sidebar.multiselect("Directly select datasets to display:", [d
 objs_display = return_objs(data_display, objs_filtered)
 
 ### Dashboard introduction
-if data_display==[]:
-    my_expander = st.expander("Dashboard introduction", expanded=True)
+if data_display!=[]:
+    my_expander = st.expander("Dashboard introduction", expanded=False)
     with my_expander:
-        st.markdown('**Welcome to the dashboard for the Healthy Brabantine City Deal Challenge!** This dashboard will guide you through the \
-        several datasets that are collected for you to use in your projects. To help you get started a short explanation about how to \
-        interact with the dashboard will follow.')
+        st.markdown('**Welcome to the dashboard for the Healthy Brabantine City Deal Challenge!**')
+        st.text('')
+        st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects. \
+        To help you get started a short explanation about how to interact with the dashboard will follow.')
+
+else:
+    st.markdown('**Welcome to the dashboard for the Healthy Brabantine City Deal Challenge!**')
+    st.text('')
+    st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects. \
+    To help you get started a short explanation about how to interact with the dashboard will follow.')
 
 ###------------ Displaying data
 for obj in objs_display:
@@ -113,7 +120,7 @@ for obj in objs_display:
         feat2 = col1.selectbox('Choose a feature', obj.df.columns[3:])
         pie3 = px.pie(obj.df, names=None, values=feat2)
         st.plotly_chart(pie3)
-        
+
     if f=='land_usage':
         municip = col1.selectbox('Choose municipality', obj.df['municipalities_Brabant'])
         filt3 = obj.df[obj.df['municipalities_Brabant'] == municip]
