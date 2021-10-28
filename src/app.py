@@ -73,7 +73,7 @@ for obj in objs_display:
 
     if f == 'municipality_data':
         feature = col1.selectbox('Select a feature', obj.df.columns[3:])
-        municip = col2.multiselect('Select a municipality', obj.df['Name of municipality'].unique())
+        municip = col2.multiselect('Select a municipality', obj.df['Name of municipality'].unique(), default=["'s-Hertogenbosch"])
         filtered = obj.df[obj.df['Name of municipality'].isin(municip)]
         fig4 = px.bar(filtered, x='year', y=feature, color='Name of municipality')
         st.plotly_chart(fig4)
@@ -83,4 +83,4 @@ for obj in objs_display:
         year = col2.select_slider('Choose the year', obj.df['Periods'].unique())
         filt = obj.df[(obj.df['Periods'] == year) & (obj.df['Regions'] != 'Nederland')] 
         barchart = px.bar(filt, y=feat, x='Regions')
-        st.plotly_chart(barchart)
+        st.plotly_chart(barchart, use_container_width=True)
