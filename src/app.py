@@ -35,14 +35,24 @@ if data_display!=[]:
     with my_expander:
         st.markdown('**Welcome to the dashboard for the Healthy Brabantine City Deal Challenge!**')
         st.text('')
-        st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects. \
-        To help you get started a short explanation about how to interact with the dashboard will follow.')
+        st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects.\
+        To help you get started, a short explanation about how to interact with the dashboard will follow. On the left you can see\
+        two menus, one to choose a challenge and another to choose datasets. You can select the challenge you want to look into by choosing\
+        one of the three challenges in the top select menu. Now, in the lower select menu you can choose which datatsets belonging\
+        to the chosen challenge you want to see. Each dataset contains an explanation, an option to download it to your computer\
+        and the table showing what data is in it. Some of the datasets also have explanatory plots to help you understand better what the\
+        data is about.')
 
 else:
     st.markdown('**Welcome to the dashboard for the Healthy Brabantine City Deal Challenge!**')
     st.text('')
-    st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects. \
-    To help you get started a short explanation about how to interact with the dashboard will follow.')
+    st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects.\
+    To help you get started, a short explanation about how to interact with the dashboard will follow. On the left you can see\
+    two menus, one to choose a challenge and another to choose datasets. You can select the challenge you want to look into by choosing\
+    one of the three challenges in the top select menu. Now, in the lower select menu you can choose which datatsets belonging\
+    to the chosen challenge you want to see. Each dataset contains an explanation, an option to download it to your computer\
+    and the table showing what data is in it. Some of the datasets also have explanatory plots to help you understand better what the\
+    data is about.')
 
 ###------------ Displaying data
 for obj in objs_display:
