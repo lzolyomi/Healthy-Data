@@ -77,3 +77,10 @@ for obj in objs_display:
         filtered = obj.df[obj.df['Name of municipality'].isin(municip)]
         fig4 = px.bar(filtered, x='year', y=feature, color='Name of municipality')
         st.plotly_chart(fig4)
+
+    if f=='water_treatment':
+        feat = col1.selectbox('Select a feature', obj.df.columns[4:])
+        year = col2.select_slider('Choose the year', obj.df['Periods'].unique())
+        filt = obj.df[(obj.df['Periods'] == year) & (obj.df['Regions'] != 'Nederland')] 
+        barchart = px.bar(filt, y=feat, x='Regions')
+        st.plotly_chart(barchart)
