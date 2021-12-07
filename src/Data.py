@@ -47,14 +47,9 @@ class Dataset:
         ret_elements.append(st.markdown(f'## {self.name} \n #### {self.descr}'))
         self.open_file() #opens file as dataframe
         ret_elements.append(self.download()) 
-        if len(self.df) < 500:
-            ret_elements.append(
-                st.dataframe(self.df)
-            )
-        else:
-            ret_elements.append(
-                st.dataframe(self.df[:401])
-            )
+        ret_elements.append(
+            st.dataframe(self.df.head(100))
+        )
         return ret_elements
 
 
