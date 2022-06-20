@@ -21,7 +21,7 @@ for d in data_objs:
 topics = ['Water', 'Health', 'Living environment']
 
 #---------------Start Dashboard
-st.set_page_config(layout="wide", page_title='Healthy City',page_icon='src/logo.png')
+st.set_page_config(layout="wide", page_title='Healthy City',page_icon='assets/logo.png')
 
 #---------------Layout of the app
 ### Filtering
@@ -47,7 +47,7 @@ if data_display!=[]:
         data is about.')
 
 else:
-    st.image('src/banner.jpg', width=1100)
+    st.image('assets/banner-5th-ed.jpg', width=900)
     st.markdown('**Welcome to the dashboard for the Healthy Brabantine City Deal Challenge!**')
     st.text('')
     st.markdown('This dashboard will guide you through the several datasets that are collected for you to use in your projects.\
