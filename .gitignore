@@ -1,5 +1,8 @@
 src/data/*.csv
+src/data/*.xls
+src/data/*.xlsx
 **/*.DS_Store
 notebooks/*
 src/__pycache__/*
 src/notebooks/*
+*.ipynb

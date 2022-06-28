@@ -1,19 +1,27 @@
-,filename,name,description,health,water,living
-0,water_usage,Water usage,This dataset contains the average water usage and cost,1,1,1
-1,jobs_Brabant,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020. Figures are absolute numbers,1,0,1
-2,COVID_metrics,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
-3,Brabant_health,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
-4,brabant_cities,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
-5,housing_stock,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
-6,land_usage,Land usage Brabant,This dataset contains the land usage in municipalities across Brabant. all units are x 10.000m2,0,1,0
-7,landscape_management,Landscape management data Brabant,This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
-8,student_debt,Student debt data,"This dataset contains national figures about student debt. No. people is x 1000 person, sum is billion euros, rest is x 1000 euros",0,0,1
-9,tree_data,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
-10,vacancies_brabant,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant. Fgiures are absolute numbers from 2020 Aug.,0,0,1
-11,weather_data,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
-12,youth_labour_participation,Youth labour participation,"This dataset contains figures about youth labor participation in the Netherlands. Units are x 1000 people, or percentage for rates.",1,0,1
-13,renewable_electricity,Renewable energy,This dataset shows the electricity produced with different renewable sources between 1990 and 2020. All values are in mln kWh if not stated otherwise. Installations is absolute number,1,1,1
-14,consumer_expenses,Consumer expenses,Contains information on consumer expenses between 2000 and 2020. Change in baseline is ratio compared to 2015 values. So 2015 is 100. Delta YoY is the change compared to last years same data,1,0,1
-15,bankruptcy,Bankruptcies,This dataset contains the number of bankruptcies reported in separate regions of the Netherlands for 2009-2020. This could serve as an indication of financial situation.,1,0,1
-16,municipality_data,Municipality analysis,This dataset contains extensive data on municipalities from 2013 to 2016. Units are either absolute values or percentages.,1,1,1
-17,water_treatment,Water treatment plants,"This dataset contains info about waste water treatment plants in the Netherlands. Data is ranging from 1981 to 2019, but is not measured each year. Flow metrics are in 1000m3, inhabitant equivalent means plant can handle that many inhabitants discharge.",1,1,0
+filename,name,description,health,water,living
+water_usage,Water usage,This dataset contains the average water usage and cost,1,1,1
+jobs_Brabant,Brabant Jobs,This dataset contains jobs in Brabant per municipality and sector for 2020. Figures are absolute numbers,1,0,1
+COVID_metrics,COVID-19 statistics,This datasets contains COVID-19 statistics since February 2020,1,0,0
+Brabant_health,Brabant health information,This dataset contains Brabant health information in percentages,1,0,0
+brabant_cities,Brabant municipalities,This dataset contains the names of municipalities in Brabant. It can be used to filter nationwide datasets to only show Brabant municipalities.,1,1,1
+housing_stock,Housing stock information in Brabant,This dataset contains data on available housing in Brabant.,0,0,1
+land_usage,Land usage Brabant,This dataset contains the land usage in municipalities across Brabant. all units are x 10.000m2,0,1,0
+landscape_management,Landscape management data Brabant,This dataset contains national figures for the maintenance and management of the landscape.,0,1,0
+student_debt,Student debt data,"This dataset contains national figures about student debt. No. people is x 1000 person, sum is billion euros, rest is x 1000 euros",0,0,1
+tree_data,Tree data,This datasets contains characteristics about trees in a similar climate as the Netherlands.,0,1,0
+vacancies_brabant,Job vacancies in Brabant,This dataset contains figures about the amount of job vacancies in Brabant. Fgiures are absolute numbers from 2020 Aug.,0,0,1
+weather_data,Weather data Brabant,This dataset contain weather conditions for weather stations in Gilze-Rijen and Eindhoven.,0,1,0
+youth_labour_participation,Youth labour participation,"This dataset contains figures about youth labor participation in the Netherlands. Units are x 1000 people, or percentage for rates.",1,0,1
+renewable_electricity,Renewable energy,This dataset shows the electricity produced with different renewable sources between 1990 and 2020. All values are in mln kWh if not stated otherwise. Installations is absolute number,1,1,1
+consumer_expenses,Consumer expenses,Contains information on consumer expenses between 2000 and 2020. Change in baseline is ratio compared to 2015 values. So 2015 is 100. Delta YoY is the change compared to last years same data,1,0,1
+bankruptcy,Bankruptcies,This dataset contains the number of bankruptcies reported in separate regions of the Netherlands for 2009-2020. This could serve as an indication of financial situation.,1,0,1
+municipality_data,Municipality analysis,This dataset contains extensive data on municipalities from 2013 to 2016. Units are either absolute values or percentages.,1,1,1
+water_treatment,Water treatment plants,"This dataset contains info about waste water treatment plants in the Netherlands. Data is ranging from 1981 to 2019, but is not measured each year. Flow metrics are in 1000m3, inhabitant equivalent means plant can handle that many inhabitants discharge.",1,1,0
+dairy_product_prices,Dairy product prices,Price of dairy products between 2021 Jan and 2022 May. unit indicated in data set. Source: https://www.agrimatie.nl/Prijzen.aspx?ID=15125,0,0,1
+cattle_prices,Cattle prices,"Price of cattles and cattle products between 2021 Jan and 2022 May, units indicated in data. Source: https://www.agrimatie.nl/Prijzen.aspx?ID=15125",0,0,1
+sheep_prices,Sheep prices,"Price of sheep between 2021 Jan and 2022 May, units indicated in data. source: https://www.agrimatie.nl/Prijzen.aspx?ID=15125",0,0,1
+poultry_prices,Poultry prices,"Price of poultry between 2021 Jan and 2022 May, units indicated in data. source: https://www.agrimatie.nl/Prijzen.aspx?ID=15125",0,0,1
+pig_prices,Pig prices,"Price of pigs between 2021 Jan and 2022 May, units indicated in data. source: https://www.agrimatie.nl/Prijzen.aspx?ID=15125",0,0,1
+agriculture_land_use,Agricultural land use,Data on how agricultural land is used in/near Den Bosch. source: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/80781NED/table?fromstatweb,0,0,1
+Farmers_NH3_emission,Farmers NH3 emission,"NH3 and other emissions for farmlands with coordinates and indicator whether its close to a Natura 2000 area. data was converted from geoJSON, original source: https://data.overheid.nl/dataset/15524-bestand-veehouderijbedrijven ",0,0,1
+NATURA2000_netherlands,Natura 2000 Netherlands,This data set contains information about all Natura 2000 locations in the Netherlands. original source: eea.europa.eu/data-and-maps/data/natura-13 ,0,0,1

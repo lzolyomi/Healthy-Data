@@ -2,6 +2,8 @@ from typing import Dict
 import pandas as pd
 import os
 
+challenge_categories = ["health", "water", "living"]  # NOTE: not in use yet
+
 
 def convert_parquet(filename):
     """
@@ -22,7 +24,7 @@ def check_inv_file():
     else:
         colnames = ["filename", "name", "description", "health", "water", "living"]
         inv = pd.DataFrame({element: [] for element in colnames})
-        inv.to_csv("src/data_inventory.csv")
+        inv.to_csv("src/data_inventory.csv", index=False)
     return inv
 
 
@@ -60,7 +62,7 @@ def delete_datasets(filename):
     inv = pd.read_csv("src/data_inventory.csv")
     inv.set_index("filename", inplace=True)
     inv.drop(filename, inplace=True)
-    inv.to_csv("src/data_inventory.csv")
+    inv.to_csv("src/data_inventory.csv", index=False)
 
 
 def update_datainv(path):
@@ -75,7 +77,7 @@ def update_datainv(path):
             new_row = assess_file(file, existing_filenames)
             if type(new_row) == dict:  # check if we actually want to add
                 data_inv = data_inv.append(new_row, ignore_index=True)
-    data_inv.to_csv("src/data_inventory.csv")
+    data_inv.to_csv("src/data_inventory.csv", index=False)
 
 
 if __name__ == "__main__":
