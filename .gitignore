@@ -1,8 +1,17 @@
+# DATA FILES
 src/data/*.csv
 src/data/*.xls
 src/data/*.xlsx
-**/*.DS_Store
+
+#NOTEBOOKS
 notebooks/*
-src/__pycache__/*
 src/notebooks/*
-*.ipynb
+src/*.ipynb
+
+#MISC
+**/*.DS_Store
+src/__pycache__/*
+.ipynb_checkpoints
+
+#EXCEPTIONS
+! data_track/*
