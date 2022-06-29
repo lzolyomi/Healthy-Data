@@ -25,3 +25,7 @@ pig_prices,Pig prices,"Price of pigs between 2021 Jan and 2022 May, units indica
 agriculture_land_use,Agricultural land use,Data on how agricultural land is used in/near Den Bosch. source: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/80781NED/table?fromstatweb,0,0,1
 Farmers_NH3_emission,Farmers NH3 emission,"NH3 and other emissions for farmlands with coordinates and indicator whether its close to a Natura 2000 area. data was converted from geoJSON, original source: https://data.overheid.nl/dataset/15524-bestand-veehouderijbedrijven ",0,0,1
 NATURA2000_netherlands,Natura 2000 Netherlands,This data set contains information about all Natura 2000 locations in the Netherlands. original source: eea.europa.eu/data-and-maps/data/natura-13 ,0,0,1
+employee_distribution,Employee age distribution Den Bosch,This data set contains the distribution on the working population of den bosch per neighbourhood. The values for the age groups are in percentages.,0,0,1
+education-neighbourhood,Education per neighbourhood,This data set contains percentage of the population belonging to a given education category. All neighbourhoods are in Den Bosch.,0,0,1
+education-area,Education per area,This data set contatins percentage of the population belonging to a given education category. All areas are in Den Bosch,0,0,1
+DenBosch-avg-salary,Average salary DenBosch,This data set contains the average salary per neighbourhood and age group in DenBosch. All values are in thousand euros and denote annual salary.,0,0,1
