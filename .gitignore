@@ -15,3 +15,6 @@ src/__pycache__/*
 
 #EXCEPTIONS
 ! data_track/*
+
+# OTHER FILE TYPES
+*.zip
